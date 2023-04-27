@@ -11,6 +11,20 @@
     </div>
   <% end %>
 
+<%= form.label :name %>
+  <%= form.text_field :name %>
+
+
+  <%= form.label :birth %>
+  <%= form.date_field :birth %>
+
+  <%= form.fields_for :books do |book_fields| %>
+    <%= book_fields.label :title %>
+    <%= book_fields.text_field :title %>
+
+    <%= book_fields.label :year %>
+    <%= book_fields.text_field :year %>
+  <% end %>
   <div>
     <%= form.submit %>
   </div>

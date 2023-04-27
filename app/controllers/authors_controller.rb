@@ -12,6 +12,7 @@ class AuthorsController < ApplicationController
   # GET /authors/new
   def new
     @author = Author.new
+    @book = @author.books.build
   end
 
   # GET /authors/1/edit

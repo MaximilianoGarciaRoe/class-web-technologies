@@ -1,2 +1,13 @@
-<div id="<%= dom_id author %>">
+<div>
+<h3> <%= author.name%> </h3>
+<p style="color: red"> <%= author.birth%> <p>
+<% author.books.each do |book| %>
+<div>
+<%= link_to author_books_path(book) do %>
+<p><%= book.title%></p>
+<% end %>
+</div>
+
+
+<% end %>
 </div>
