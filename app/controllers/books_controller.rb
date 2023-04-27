@@ -6,13 +6,10 @@ class BooksController < ApplicationController
     @author = Author.find(params[:author_id])
 
     @books = @author.books
-    render json: @books
   end
 
   # GET /books/1 or /books/1.json
-  def show
-    render json: @book
-  end
+  def show; end
 
   # GET /books/new
   def new
